@@ -6,7 +6,7 @@
 /*   By: jkettani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 11:31:39 by jkettani          #+#    #+#             */
-/*   Updated: 2019/04/18 15:11:40 by jkettani         ###   ########.fr       */
+/*   Updated: 2019/04/18 18:02:08 by jkettani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int		check_duplicated_values(t_stacks *stacks)
 	if ((err_no = ft_lsthasdup(&stacks->stack_a, &lst_elm_compare,
 					&lst_elm_del)))
 		return (err_no);
-	if ((err_no = index_stack(stacks->stack_a)))
+	if (stacks->size_a && (err_no = index_stack(stacks->stack_a)))
 		return (err_no);
 	return (EXIT_OK);
 }
