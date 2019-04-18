@@ -6,7 +6,7 @@
 /*   By: jkettani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 13:07:39 by jkettani          #+#    #+#             */
-/*   Updated: 2019/04/18 16:28:24 by jkettani         ###   ########.fr       */
+/*   Updated: 2019/04/18 18:19:35 by jkettani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int				get_actions_from_stdin(t_stacks *stacks)
 		++count;
 		ft_strdel(&line);
 	}
-	if (action && !newline)
+	if (ret < -1 || (action && !newline))
 		return (ft_strdel_ret(&line, E_INVALID_CMD));
 	return (ft_strdel_ret(&line, EXIT_OK));
 }
