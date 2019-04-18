@@ -1,0 +1,8 @@
+*.sw*
+.obj
+checker
+push_swap
+*dSYM*
+*.tmp
+*.out
+libft.a
